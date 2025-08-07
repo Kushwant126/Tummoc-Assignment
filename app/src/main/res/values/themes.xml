@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.TummocAssignment1" parent="android:Theme.Material.Light.NoActionBar" />
+
+    <style name="Base.Theme.TummocAssignment12" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="colorPrimary">@color/_FAFBFF</item>
+        <item name="colorOnPrimary">@color/_FAFBFF</item>
+        <item name="colorSecondary">@color/_FAFBFF</item>
+        <item name="colorOnSecondary">@color/_FAFBFF</item>
+        <item name="colorSurface">@color/_FAFBFF</item>
+        <item name="colorOnSurface">@color/_FAFBFF</item>
+        <!-- Set the window background to use the primary color -->
+        <item name="android:windowBackground">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">@color/_FAFBFF</item> <!-- white color -->
+
+        <item name="colorPrimaryVariant">@color/_FAFBFF</item>
+    </style>
+
+    <style name="Base.Theme.TummocAssignmentWorking" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Your other color settings -->
+        <item name="colorPrimary">@color/_FAFBFF</item>
+        <item name="colorOnPrimary">@color/_FAFBFF</item>
+        <item name="colorSecondary">@color/_FAFBFF</item>
+        <item name="colorOnSecondary">@color/_FAFBFF</item>
+        <item name="colorSurface">@color/_FAFBFF</item>
+        <item name="colorOnSurface">@color/_FAFBFF</item>
+
+
+        <item name="android:statusBarColor">@android:color/black</item>
+        <!--        <item name="android:windowBackground">@android:color/black</item> &lt;!&ndash; Optional: Set background &ndash;&gt;-->
+
+        <!--        <item name="android:statusBarColor">@android:color/white</item>-->
+        <!--        <item name="android:windowBackground">@android:color/white</item> &lt;!&ndash; Optional: Set background &ndash;&gt;-->
+    </style>
+
+
+    <style name="Theme.TummocAssignment" parent="Base.Theme.TummocAssignment" />
+    <style name="Base.Theme.TummocAssignment" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/_FAFBFF</item>
+        <item name="colorOnPrimary">@color/_FAFBFF</item>
+        <item name="colorSecondary">@color/_FAFBFF</item>
+        <item name="colorOnSecondary">@color/_FAFBFF</item>
+        <item name="colorSurface">@color/_FAFBFF</item>
+        <item name="colorOnSurface">@color/_FAFBFF</item>
+
+        <item name="android:statusBarColor">@color/black</item>
+        <!--        <item name="android:statusBarColor">@color/white</item>-->
+        <item name="android:windowLightStatusBar">false</item> <!-- true = dark icons, false = light icons -->
+    </style>
+
+    <style name="DialogBottomAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+    </style>
+
+</resources>

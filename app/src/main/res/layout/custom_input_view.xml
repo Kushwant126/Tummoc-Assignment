@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="borderTitle"
+            type="String" />
+
+        <variable
+            name="editTextHint"
+            type="String" />
+
+        <variable
+            name="showMoreOptions"
+            type="Boolean" />
+
+        <variable
+            name="isEditTextEditable"
+            type="Boolean" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp">
+
+        <!-- Border + Hint -->
+        <!--        android:clickable="@{isEditTextEditable != null ? isEditTextEditable : true}"-->
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:FocusableInTouchMode="@{isEditTextEditable != null ? isEditTextEditable : true}"
+            android:LongClickable="@{isEditTextEditable != null ? isEditTextEditable : true}"
+            android:background="@drawable/custom_edittext_border"
+            android:focusable="@{isEditTextEditable != null ? isEditTextEditable : true}"
+            android:fontFamily="@font/satoshi_regular"
+            android:hint="@{editTextHint}"
+            android:padding="16dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="#94A3B8"
+            android:textCursorDrawable="@drawable/text_cursor_drawable"
+            android:textSize="16sp"
+            tools:hint="Please enter the mobile number..." />
+
+        <ImageView
+            android:id="@+id/dropDownIV"
+            android:layout_width="15dp"
+            android:layout_height="10dp"
+            android:layout_alignEnd="@id/editText"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="20dp"
+            android:padding="1dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/arrow_dwn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tint="@color/_252525"
+            bind:isVisible="@{showMoreOptions}"
+            tools:visibility="visible" />
+        <!-- Label on border -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:background="@color/white"
+            android:fontFamily="@font/satoshi_medium"
+            android:paddingHorizontal="4dp"
+            android:text="@{borderTitle,default = `Header Title`}"
+            android:textColor="#64748B"
+            android:textSize="14sp"
+            tools:text="Number" />
+    </RelativeLayout>
+</layout>

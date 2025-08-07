@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.tummocassignment.viewModel.OnBoardViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/includedHeaderLayout"
+            layout="@layout/back_nav_with_header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="0dp"
+            bind:headerTitle="@{`Add Vehicle`}" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/satoshi_bold"
+                    android:paddingHorizontal="4dp"
+                    android:text="V E H I C L E  D E T A I L S"
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp" />
+
+                <include
+                    android:id="@+id/includeBrand"
+                    layout="@layout/custom_input_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    app:borderTitle="@{`Brand`}"
+                    app:editTextHint="@{`Select a Brand`}"
+                    app:isEditTextEditable="@{false}"
+                    app:showMoreOptions="@{true}" />
+
+                <include
+                    android:id="@+id/includeModel"
+                    layout="@layout/custom_input_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    app:isEditTextEditable="@{false}"
+                    app:showMoreOptions="@{true}"
+                    bind:borderTitle="@{`Model`}"
+                    bind:editTextHint="@{`Select a Model`}" />
+
+                <include
+                    android:id="@+id/includeFuelType"
+                    layout="@layout/custom_input_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    app:isEditTextEditable="@{false}"
+                    app:showMoreOptions="@{true}"
+                    bind:borderTitle="@{`Fuel Type`}"
+                    bind:editTextHint="@{`Select Fuel Type`}" />
+
+                <include
+                    android:id="@+id/includeVehicleNumber"
+                    layout="@layout/custom_input_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    bind:borderTitle="@{`Vehicle Number`}"
+                    bind:editTextHint="@{`Enter vehicle Number (e.g.,MH 12 AB 1234)`}" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="26dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/white"
+                    android:fontFamily="@font/satoshi_bold"
+                    android:paddingHorizontal="4dp"
+                    android:text="O T H E R  D E T A I L S"
+                    android:textColor="#94A3B8"
+                    android:textSize="14sp" />
+
+                <include
+                    android:id="@+id/includeYOP"
+                    layout="@layout/custom_input_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    bind:borderTitle="@{`Year of Purchase`}"
+                    bind:editTextHint="@{`Enter year of Purchase`}" />
+
+                <include
+                    android:id="@+id/includeOwnerName"
+                    layout="@layout/custom_input_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="20dp"
+                    bind:borderTitle="@{`Owner Name`}"
+                    bind:editTextHint="@{`Enter owner's full name`}" />
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/addNewVehicleMCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="20dp"
+            app:shapeAppearanceOverlay="@style/TopRoundedCard"
+            app:strokeColor="#0E2D391A"
+            app:strokeWidth=".5dp">
+
+            <include
+                android:id="@+id/includeAddNewVehicle"
+                layout="@layout/add_vehicle_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</layout>

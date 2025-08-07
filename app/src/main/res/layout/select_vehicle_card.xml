@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="isLogoVisible"
+            type="Boolean" />
+
+        <variable
+            name="vehicle"
+            type="com.example.tummocassignment.dataModel.VehicleDetails" />
+    </data>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="7dp"
+        app:cardCornerRadius="16dp"
+        app:strokeWidth="1dp"
+        bind:bindCardBackgroundColor="@{vehicle.cardBackGroundColor}"
+        bind:bindCardElevation="@{vehicle.cardElevation}"
+        bind:bindCardStrokeColor="@{vehicle.cardStrokeColor}"
+        tools:cardElevation="0dp"
+        tools:strokeColor="#E2E8F0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--            bind:isVisible="@{!isLogoVisible}" -->
+            <ImageView
+                android:id="@+id/vehicleImage"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:padding="1dp"
+                android:src="@drawable/tata"
+                bind:bindSrcDrawable="@{vehicle.vehicleIconRes}"
+                bind:isVisible="@{vehicle.showImage }" />
+
+            <TextView
+                android:id="@+id/vehicleName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1.5"
+                android:fontFamily="@font/satoshi_bold"
+                android:gravity="center_vertical"
+                android:paddingVertical="12dp"
+                android:text="@{vehicle.name}"
+                android:textColor="@color/_020617"
+                android:textSize="16sp"
+                tools:text="Vehicle Name" />
+
+            <!--            android:buttonTint="@color/_3CB1F7"-->
+            <RadioButton
+                android:id="@+id/vehicleRadio"
+                android:layout_width="34dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:checked="@{vehicle.isSelected}"
+                android:clickable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                bind:radioTintColor="@{vehicle.radioTintColor}" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

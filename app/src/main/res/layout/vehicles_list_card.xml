@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vehicle"
+            type="com.example.tummocassignment.dataModel.Vehicle" />
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1.2"
+                android:orientation="vertical"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:id="@+id/vehicleModelTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/satoshi_medium"
+                    android:text="@{vehicle.model}"
+                    android:textColor="@color/_020617"
+                    android:textSize="12sp"
+                    tools:text="Activa 4G" />
+
+                <TextView
+                    android:id="@+id/vehicleBrandTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/satoshi_regular"
+                    android:text="@{vehicle.brand}"
+                    android:textColor="@color/_334155"
+                    android:textSize="10sp"
+                    tools:text="Honda" />
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#4494A3B8" />
+
+            <TextView
+                android:id="@+id/vehicleNumberTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1.5"
+                android:fontFamily="@font/satoshi_bold"
+                android:gravity="center_vertical"
+                android:paddingVertical="12dp"
+                android:text="@{vehicle.vehicleNumber}"
+                android:textColor="#1381FF"
+                android:textSize="12sp"
+                tools:text="Vehicle Number" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#4494A3B8" />
+
+            <TextView
+                android:id="@+id/vehicleFuelTypeTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/satoshi_medium"
+                android:gravity="center_vertical"
+                android:paddingVertical="12dp"
+                android:singleLine="false"
+                android:text="@{vehicle.fuelType}"
+                android:textColor="@color/_020617"
+                android:textSize="12sp"
+                tools:text="Fuel Type" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#4494A3B8" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/satoshi_medium"
+                android:gravity="center"
+                android:paddingVertical="12dp"
+                android:singleLine="false"
+                android:text="Year of Purchase"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:layout_weight="1.5"
+                android:orientation="vertical"
+                android:paddingVertical="12dp">
+
+                <TextView
+                    android:id="@+id/vehiclePurchasedYearTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="@font/satoshi_medium"
+                    android:text="@{vehicle.yearOfPurchase}"
+                    android:textColor="@color/_020617"
+                    android:textSize="12sp"
+                    tools:text="2018" />
+
+                <TextView
+                    android:id="@+id/vehicleAgeTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/satoshi_regular"
+                    android:text="@{vehicle.vehicleAge}"
+                    android:textColor="@color/_334155"
+                    android:textSize="10sp"
+                    tools:text="7 years 6 months" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#4494A3B8" />
+    </LinearLayout>
+</layout>
